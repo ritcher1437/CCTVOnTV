@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "CCTV",
+  "version": "1.6.8.8",
+  "description": "Automatically load  on https://tv.cctv.com/live/",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://tv.cctv.com/live/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
